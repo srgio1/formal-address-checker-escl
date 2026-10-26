@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Options</title>
+<style>
+  body { font: 14px -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 24px auto; padding: 0 16px; color: #1d2327; }
+  h1 { font-size: 20px; }
+  fieldset { border: 1px solid #dcdcde; border-radius: 6px; margin: 16px 0; padding: 12px 16px; }
+  label.row { display: flex; gap: 8px; align-items: flex-start; margin: 8px 0; }
+  textarea { width: 100%; min-height: 110px; font: 13px/1.45 inherit; padding: 8px; box-sizing: border-box; }
+  .help { color: #646970; font-size: 12.5px; margin: 4px 0 8px; }
+  button { padding: 7px 14px; border-radius: 4px; border: 1px solid #2271b1; background: #2271b1; color: #fff; cursor: pointer; font-size: 14px; }
+  button.secondary { background: #fff; color: #2271b1; }
+  #msg { margin-left: 12px; color: #007017; }
+</style>
+</head>
+<body>
+<h1 id="optTitle"></h1>
+
+<fieldset>
+  <label class="row"><span id="optLang"></span>
+    <select id="lang"><option value="es">Español</option><option value="en">English</option></select></label>
+  <label class="row"><input type="checkbox" id="detailed"><span id="optDetailed"></span></label>
+  <label class="row"><input type="checkbox" id="suggestedText"><span id="optSuggestedText"></span></label>
+  <label class="row"><input type="checkbox" id="autoApply"><span id="optAutoApply"></span></label>
+  <label class="row"><input type="checkbox" id="autoScan"><span id="optAutoScan"></span></label>
+</fieldset>
+
+<fieldset>
+  <div><strong id="optTemplateEs"></strong></div>
+  <textarea id="tplEs"></textarea>
+  <div><strong id="optTemplateEn"></strong></div>
+  <textarea id="tplEn"></textarea>
+  <div class="help" id="optTemplateHelp"></div>
+  <button class="secondary" id="reset"></button>
+</fieldset>
+
+<fieldset>
+  <div><strong id="optExtraVerbs"></strong></div>
+  <div class="help" id="optExtraVerbsHelp"></div>
+  <textarea id="extraVerbs" placeholder="especifique&#10;tómese"></textarea>
+</fieldset>
+
+<button id="save"></button><span id="msg"></span>
+
+<script src="defaults.js"></script>
+<script src="i18n.js"></script>
+<script src="options.js"></script>
+</body>
+</html>

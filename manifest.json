@@ -1,0 +1,60 @@
+{
+  "manifest_version": 3,
+  "name": "GlotPress Formal-Address Checker (es-CL)",
+  "short_name": "Formal check es-CL",
+  "version": "1.1.0",
+  "description": "Finds Spanish translations that address the user as \"usted\" on translate.wordpress.org (es-CL), lets you review them, and prepares the \"Reject with Feedback\" window with the Style Guide reason and a comment.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "formal-address-checker-escl@local",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    },
+    "gecko_android": {
+      "strict_min_version": "142.0"
+    }
+  },
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "action": {
+    "default_title": "Formal address check (es-CL)",
+    "default_icon": {
+      "48": "icons/icon-48.png",
+      "96": "icons/icon-96.png"
+    }
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://translate.wordpress.org/projects/*/es-cl/*"
+      ],
+      "js": [
+        "wordlist.js",
+        "formality.js",
+        "defaults.js",
+        "i18n.js",
+        "feedback.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
