@@ -24,7 +24,3 @@ The comment can list the suggested changes of every prepared row in one line (se
 
 Only the rows on the current page are scanned. Language (Español/English) switches both the
 interface and the comment. Comments, extra verbs and behaviour are in the add-on's Options.
-
-## Develop / test
-    cd tests && npm install && node parity.test.js && node feedback.test.js && node integration.test.js
-`wordlist.js` is generated from the Python app's `formality_wordlist.txt`.
