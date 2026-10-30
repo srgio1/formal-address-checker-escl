@@ -1,3 +1,5 @@
+<img width="3068" height="1608" alt="screenshot" src="https://github.com/user-attachments/assets/a6dd9415-0d92-4306-8a9d-81f52bcf497c" />
+
 # GlotPress Formal-Address Checker (es-CL)
 
 Firefox extension for translate.wordpress.org (Spanish – Chile). It finds translations that
